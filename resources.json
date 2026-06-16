@@ -1,0 +1,178 @@
+[
+  {
+    "section": "Handbooks & SOPs",
+    "type": "SOP",
+    "name": "Fulfilment Team Handbook",
+    "desc": "Overview of offers, team responsibilities, student journey, systems, communication standards, escalation, weekly rhythm, and key rules.",
+    "audience": "All Team",
+    "link": "https://drive.google.com/file/d/18LXCbiHiy1W0G4VIgZgqCF1cIBLGhGIu/view?usp=sharing"
+  },
+  {
+    "section": "Handbooks & SOPs",
+    "type": "SOP",
+    "name": "Member Onboarding SOP",
+    "desc": "Step-by-step onboarding process — WhatsApp handoff, onboarding call, Discord migration, folder setup.",
+    "audience": "CSM",
+    "link": "https://drive.google.com/file/d/1rd1tNXBOpb82QnRa06JXaB5lp8fjdkjy/view?usp=sharing"
+  },
+  {
+    "section": "Handbooks & SOPs",
+    "type": "SOP",
+    "name": "CRM Data Entry & Student Tracking SOP",
+    "desc": "How CSMs and coaches use the CRM — fields, stages, call logging, weekly responsibilities.",
+    "audience": "CSM & Coaches",
+    "link": "https://drive.google.com/file/d/1zg9hKnddVrls_nyXU82I1a-IJK1ljgbf/view?usp=sharing"
+  },
+  {
+    "section": "Handbooks & SOPs",
+    "type": "SOP",
+    "name": "PPC Manager SOP",
+    "desc": "Weekly PPC review — update P&L tracker, optimise, record Loom, post in Discord, log in Airtable.",
+    "audience": "PPC Manager",
+    "link": "https://drive.google.com/file/d/1bxdGVttvGalta_ZhVPgrERHJ9v-OFERy/view?usp=sharing"
+  },
+  {
+    "section": "Handbooks & SOPs",
+    "type": "SOP",
+    "name": "Monthly Report Creation SOP",
+    "desc": "Generate monthly reports using Claude — download tracker, upload, review, send.",
+    "audience": "Coaches",
+    "link": "https://drive.google.com/file/d/1M78B7uquATzvQkcrawEYaCglF77vOfFN/view?usp=sharing"
+  },
+  {
+    "section": "Handbooks & SOPs",
+    "type": "Guide",
+    "name": "Weekly Research Hour — Host Guide",
+    "desc": "Implementation session structure — live demo, set task, silent work, wrap up. Scripts included.",
+    "audience": "Host",
+    "link": "https://drive.google.com/file/d/1M78B7uquATzvQkcrawEYaCglF77vOfFN/view?usp=sharing"
+  },
+  {
+    "section": "Handbooks & SOPs",
+    "type": "Guide",
+    "name": "Claude Skill Installation Guide",
+    "desc": "Install Claude skills into a project — 4 steps, 2 minutes, one-time setup.",
+    "audience": "Coaches",
+    "link": "https://drive.google.com/file/d/19FjOtRNaDFLCxDP7yFcxDPOh76uXEbtY/view?usp=sharing"
+  },
+  {
+    "section": "Onboarding Slides",
+    "type": "Slides",
+    "name": "Onboarding Call Slides — Foundation",
+    "desc": "Canva slides used by CSM during Foundation onboarding calls.",
+    "audience": "CSM",
+    "link": "https://canva.link/4085d3l597mjm0n"
+  },
+  {
+    "section": "Onboarding Slides",
+    "type": "Slides",
+    "name": "Onboarding Call Slides — Elite",
+    "desc": "Canva slides used by CSM during Elite onboarding calls.",
+    "audience": "CSM",
+    "link": "https://canva.link/ltg9yoq5xr4555l"
+  },
+  {
+    "section": "Sheets & Templates",
+    "type": "Sheet",
+    "name": "Internal Product Research Tracker",
+    "desc": "Product Research VA fills in data. Coach reviews and approves for student allocation.",
+    "audience": "Internal",
+    "link": "https://docs.google.com/spreadsheets/d/1mby45bGRj-abyBAyok5J4GOYV_3Q9Lg4thokRyFC8pI/edit?usp=sharing"
+  },
+  {
+    "section": "Sheets & Templates",
+    "type": "Sheet",
+    "name": "Student Product Feedback — White Label",
+    "desc": "Students fill in product data and 8-point checklist. All checks must PASS.",
+    "audience": "Student Facing",
+    "link": "https://docs.google.com/spreadsheets/d/1prjX4YPE_Bn7cAPNGPLPKsMVVa-XB13zL8I7P9kHG7o/edit?usp=sharing"
+  },
+  {
+    "section": "Sheets & Templates",
+    "type": "Sheet",
+    "name": "Student Product Feedback — Wholesale",
+    "desc": "Students fill in wholesale data and 5-point checklist.",
+    "audience": "Student Facing",
+    "link": "https://docs.google.com/spreadsheets/d/1y32PS-3NIYS7cazdlVjFTy4mWsSXFTY_-ELTzTk_anI/edit?usp=sharing"
+  },
+  {
+    "section": "Sheets & Templates",
+    "type": "Sheet",
+    "name": "Product P&L Tracker — UK",
+    "desc": "Unit economics with VAT (Tab 1), weekly tracker (Tab 2), dashboard (Tab 3).",
+    "audience": "Coach Weekly",
+    "link": "https://docs.google.com/spreadsheets/d/1EtG2-u6WSvVEfWppNzT7MuaZ6FcNbvx_IjiLfy-KVH4/edit?usp=sharing"
+  },
+  {
+    "section": "Sheets & Templates",
+    "type": "Sheet",
+    "name": "Product P&L Tracker — US",
+    "desc": "Same as UK without VAT. Currency in $.",
+    "audience": "Coach Weekly",
+    "link": "https://docs.google.com/spreadsheets/d/1TQL6mWaJJxlfiDzc3TqZCfqlHNY0GN23J3WercM0yz0/edit?usp=sharing"
+  },
+  {
+    "section": "Claude Skills",
+    "type": "Skill",
+    "name": "Monthly Report Skill",
+    "desc": "Generates branded monthly business reports. Upload P&L tracker, tell Claude student and month.",
+    "audience": "Coaches",
+    "link": "https://docs.google.com/document/d/1B-El3zGBzEN59dh2-JdJSVvIRoO21ZPCWHIiNXFu2NM/edit?usp=sharing"
+  },
+  {
+    "section": "Claude Skills",
+    "type": "Skill",
+    "name": "Product Opportunity Report Skill",
+    "desc": "Generates one-page product reports for Elite and Incubator students.",
+    "audience": "Coaches",
+    "link": "https://docs.google.com/document/d/11SvW3zcBlFHUZ3RLkvZGNYcVFgAGCYVsMqXk0_uxY8Q/edit?usp=sharing"
+  },
+  {
+    "section": "Google Drive",
+    "type": "Folder",
+    "name": "Student Google Drive Folders",
+    "desc": "Master folder — Foundation, Elite, Incubator + template folder with UK/US sheets.",
+    "audience": "All Tiers",
+    "link": "https://drive.google.com/drive/folders/1Ole3RXG7zwBdC1WSava1iZsKyohCQ9gX?usp=sharing"
+  },
+  {
+    "section": "Loom Walkthroughs",
+    "type": "Loom",
+    "name": "Complete CRM Overview",
+    "desc": "Full walkthrough of every CRM field and who fills it.",
+    "audience": "All Team",
+    "link": "https://www.loom.com/share/73927bb62318423eb037b96e3d177d48"
+  },
+  {
+    "section": "Loom Walkthroughs",
+    "type": "Loom",
+    "name": "CRM for Coaches",
+    "desc": "Coach-specific guide — fields, stages, filtered views.",
+    "audience": "Coaches",
+    "link": "https://www.loom.com/share/817abe50c46a449cb7000c0213eef783"
+  },
+  {
+    "section": "Loom Walkthroughs",
+    "type": "Loom",
+    "name": "Google Drive Walkthrough — Foundation",
+    "desc": "How to set up and navigate the Foundation folder.",
+    "audience": "CSM",
+    "link": "https://www.loom.com/share/9fa95d0e94c041d2bf32a35027a8e31e"
+  },
+  {
+    "section": "Loom Walkthroughs",
+    "type": "Loom",
+    "name": "Google Drive Walkthrough — Elite",
+    "desc": "How to set up and navigate the Elite folder.",
+    "audience": "CSM",
+    "link": "https://www.loom.com/share/a34834ae880547268eb709e283855018"
+  },
+  {
+    "section": "Loom Walkthroughs",
+    "type": "Loom",
+    "name": "Google Drive Walkthrough — Incubator",
+    "desc": "How to set up and navigate the Incubator folder.",
+    "audience": "CSM",
+    "link": "https://www.loom.com/share/1496585b4f1243cbb2f4a877f23c9a24"
+  }
+]

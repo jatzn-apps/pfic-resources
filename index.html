@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PFIC — Resource Directory</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0D0D0D; font-family: 'DM Sans', sans-serif; color: #E8E4DE; min-height: 100vh; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .header { text-align: center; padding: 40px 0 28px; border-bottom: 1px solid #1E1E1E; margin-bottom: 24px; }
+  .header-brand { font-size: 9px; letter-spacing: 5px; text-transform: uppercase; color: #C9A84C; font-weight: 600; margin-bottom: 10px; }
+  .header-title { font-size: 28px; font-weight: 700; color: #FFF; margin-bottom: 6px; }
+  .header-sub { font-size: 13px; color: #666; }
+  .search-wrap { position: relative; margin-bottom: 24px; }
+  .search-wrap input { width: 100%; padding: 12px 16px 12px 40px; background: #141414; border: 1px solid #1E1E1E; border-radius: 8px; color: #FFF; font-size: 14px; outline: none; font-family: inherit; }
+  .search-wrap input:focus { border-color: #C9A84C; }
+  .search-wrap span { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #555; font-size: 16px; }
+  .section { margin-bottom: 28px; }
+  .section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #C9A84C; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #1E1E1E; }
+  .section-label span { color: #333; font-weight: 400; }
+  .resource { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; background: #141414; border: 1px solid #1E1E1E; border-radius: 8px; margin-bottom: 6px; text-decoration: none; transition: border-color 0.2s; cursor: pointer; }
+  .resource:hover { border-color: #C9A84C; }
+  .resource-icon { width: 34px; height: 34px; min-width: 34px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #FFF; }
+  .resource-content { flex: 1; min-width: 0; }
+  .resource-title { font-size: 13px; font-weight: 600; color: #FFF; margin-bottom: 2px; }
+  .resource-desc { font-size: 11px; color: #888; line-height: 1.4; }
+  .resource-meta { display: flex; gap: 6px; margin-top: 4px; align-items: center; }
+  .badge { font-size: 9px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 2px 7px; border-radius: 3px; }
+  .resource-audience { font-size: 9px; color: #555; }
+  .resource-arrow { color: #333; font-size: 16px; align-self: center; flex-shrink: 0; }
+  .resource:hover .resource-arrow { color: #C9A84C; }
+  .results-count { font-size: 12px; color: #555; margin-bottom: 16px; }
+  .empty { text-align: center; padding: 40px; color: #444; }
+  .footer { text-align: center; padding-top: 24px; border-top: 1px solid #1E1E1E; margin-top: 16px; }
+  .footer-text { font-size: 9px; color: #444; letter-spacing: 2px; text-transform: uppercase; }
+  .footer-logo { font-size: 11px; color: #C9A84C; font-weight: 700; letter-spacing: 3px; margin-top: 6px; }
+  .loading { text-align: center; padding: 60px; color: #555; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="header-brand">Profit Flywheel Inner Circle</div>
+    <div class="header-title">Resource Directory</div>
+    <div class="header-sub">SOPs, Handbooks, Guides, Templates & Walkthroughs</div>
+  </div>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Search resources...">
+    <span>🔍</span>
+  </div>
+  <div id="resultsCount" class="results-count" style="display:none;"></div>
+  <div id="content"><div class="loading">Loading resources...</div></div>
+  <div class="footer">
+    <div class="footer-text">Profit Flywheel Inner Circle — Internal Resource Directory</div>
+    <div class="footer-logo">PFIC</div>
+  </div>
+</div>
+<script>
+const SECTIONS = ["Handbooks & SOPs","Onboarding Slides","Sheets & Templates","Claude Skills","Google Drive","Loom Walkthroughs"];
+const TYPE_COLORS = {SOP:"#C9A84C",Guide:"#C9A84C",Handbook:"#C9A84C",Slides:"#3498DB",Sheet:"#27AE60",Template:"#27AE60",Skill:"#E74C3C",Folder:"#F39C12",Loom:"#625DF5"};
+let resources = [];
+
+function getInitials(name) { return name.split(" ").map(w => w[0]).join("").slice(0,2).toUpperCase(); }
+
+function render() {
+  const q = document.getElementById("searchInput").value.toLowerCase();
+  const filtered = resources.filter(r => !q || r.name.toLowerCase().includes(q) || r.desc.toLowerCase().includes(q) || r.type.toLowerCase().includes(q) || r.audience.toLowerCase().includes(q) || r.section.toLowerCase().includes(q));
+  const rc = document.getElementById("resultsCount");
+  if (q) { rc.style.display = "block"; rc.textContent = filtered.length + ' result' + (filtered.length!==1?'s':'') + ' for "' + q + '"'; }
+  else { rc.style.display = "none"; }
+  let html = "";
+  SECTIONS.forEach(function(sec) {
+    const items = filtered.filter(r => r.section === sec);
+    if (items.length === 0) return;
+    html += '<div class="section"><div class="section-label">' + sec + ' <span>(' + items.length + ')</span></div>';
+    items.forEach(function(r) {
+      const c = TYPE_COLORS[r.type] || "#C9A84C";
+      const icon = r.type === "Loom" ? "▶" : getInitials(r.name);
+      html += '<div class="resource" onclick="window.open(\'' + r.link + '\',\'_blank\')">' +
+        '<div class="resource-icon" style="background:' + c + '">' + icon + '</div>' +
+        '<div class="resource-content">' +
+          '<div class="resource-title">' + r.name + '</div>' +
+          '<div class="resource-desc">' + r.desc + '</div>' +
+          '<div class="resource-meta">' +
+            '<span class="badge" style="background:' + c + '22;color:' + c + '">' + r.type + '</span>' +
+            '<span class="resource-audience">' + r.audience + '</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="resource-arrow">→</div>' +
+      '</div>';
+    });
+    html += "</div>";
+  });
+  if (filtered.length === 0) html = '<div class="empty"><div>No resources found</div><div style="font-size:13px">Try a different search term</div></div>';
+  document.getElementById("content").innerHTML = html;
+}
+
+fetch("resources.json").then(r => r.json()).then(function(data) { resources = data; render(); }).catch(function() { document.getElementById("content").innerHTML = '<div class="empty"><div>Could not load resources</div><div style="font-size:13px">Check that resources.json exists in the same folder</div></div>'; });
+document.getElementById("searchInput").addEventListener("input", render);
+</script>
+</body>
+</html>
