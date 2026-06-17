@@ -13,7 +13,7 @@
     "name": "Member Onboarding SOP",
     "desc": "Step-by-step onboarding process — WhatsApp handoff, onboarding call, Discord migration, folder setup.",
     "audience": "CSM",
-    "link": "https://drive.google.com/file/d/1rd1tNXBOpb82QnRa06JXaB5lp8fjdkjy/view?usp=sharing"
+    "link": "https://drive.google.com/file/d/1rd1tNXBOpB82QnRa06JXaB5lp8fjdkjy/view?usp=sharing"
   },
   {
     "section": "Handbooks & SOPs",
@@ -174,5 +174,13 @@
     "desc": "How to set up and navigate the Incubator folder.",
     "audience": "CSM",
     "link": "https://www.loom.com/share/1496585b4f1243cbb2f4a877f23c9a24"
+  },
+  {
+    "section": "Loom Walkthroughs",
+    "type": "Loom",
+    "name": "Weekly PPC Manager SOP Walkthrough",
+    "desc": "How to launch, optimise and track PPC data for students.",
+    "audience": "PPC Manager",
+    "link": "https://www.loom.com/share/ddcad2adaa864c599f1696bccc3c5755"
   }
 ]
