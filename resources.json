@@ -112,14 +112,6 @@
     "link": "https://docs.google.com/spreadsheets/d/1TQL6mWaJJxlfiDzc3TqZCfqlHNY0GN23J3WercM0yz0/edit?usp=sharing"
   },
   {
-    "section": "Sheets & Templates",
-    "type": "Sheet",
-    "name": "Coach Task Log",
-    "desc": "Coach can log all the task completed for students to view whenever",
-    "audience": "Coach Weekly",
-    "link": "https://docs.google.com/spreadsheets/d/1KnkN2qzp5WHiY-2kszTm43snRaocd5DmDKghg_aJgmg/edit?usp=sharing"
-  },
-  {
     "section": "Claude Skills",
     "type": "Skill",
     "name": "Monthly Report Skill",
