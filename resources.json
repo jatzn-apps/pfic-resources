@@ -74,18 +74,18 @@
   {
     "section": "Onboarding Slides",
     "type": "Slides",
-    "name": "Onboarding Call Slides — Foundation",
-    "desc": "Canva slides used by CSM during Foundation onboarding calls.",
+    "name": "Onboarding Call Slides — Elite",
+    "desc": "Canva slides used by CSM during Elite onboarding calls.",
     "audience": "CSM",
-    "link": "https://canva.link/4085d3l597mjm0n"
+    "link": "https://elite-onboarding-ten.vercel.app/"
   },
   {
     "section": "Onboarding Slides",
     "type": "Slides",
-    "name": "Onboarding Call Slides — Elite",
-    "desc": "Canva slides used by CSM during Elite onboarding calls.",
+    "name": "Onboarding Call Slides — Incubator",
+    "desc": "Canva slides used by CSM during Incubator onboarding calls.",
     "audience": "CSM",
-    "link": "https://canva.link/ltg9yoq5xr4555l"
+    "link": "https://incubator-onboarding.vercel.app/"
   },
   {
     "section": "Sheets & Templates",
